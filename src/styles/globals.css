@@ -119,3 +119,13 @@ p:not(:first-child) {
 .section-content-container {
   @apply p-8 h-80 bg-white/50 text-black flex items-center justify-center flex-grow rounded-lg;
 }
+
+input,
+textarea {
+  appearance: none;
+  color: black;
+}
+
+#input-email:invalid {
+  outline: 3px solid red;
+}

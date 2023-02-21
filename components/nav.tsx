@@ -5,7 +5,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 export const Nav = () => {
   let Array: string[][] = [
     ['Home', '/'],
-    ['Play Online', '/'],
+    ['Play Online', '/play'],
     ['Online Calculator', '/calculator'],
     ['Buy The Game!', '/purchase'],
     ['Contact Us', '/contact'],
