@@ -13,7 +13,10 @@ export const Nav = () => {
   return (
     <nav className="top-nav justify-center items-center gap-2 h-16">
       {Array.map(([title, url]) => (
-        <Link key={title} href={url} className="nav-link max-w-max pt-2">
+        <Link
+          key={title}
+          href={url}
+          className="nav-link max-w-max pt-2 uppercase">
           {title}
         </Link>
       ))}
@@ -59,7 +62,7 @@ export const Navigation = () => {
       <div className="navigation-container">
         <div className="logo-container pl-8">
           <div className="text-logo text-2xl font-black uppercase pt-1">
-            Entertainment Emporium
+            <img src="text-logo.png" alt="text logo" className="w-72"></img>
           </div>
         </div>
         <Nav></Nav>
