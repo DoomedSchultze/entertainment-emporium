@@ -1,15 +1,9 @@
+import { Button } from 'components/Button';
 import { Navigation } from 'components/nav';
 import { Section } from 'components/Section';
 import Link from 'next/link';
 
 export default function HomePage() {
-  let Array: string[][] = [
-    ['Home', '/'],
-    ['Play Online', '/'],
-    ['Online Calculator', '/calculator'],
-    ['Buy The Game', '/purchase'],
-    ['Contact Us', '/contact'],
-  ];
   return (
     <div className="">
       <div className="body-container">
@@ -21,31 +15,26 @@ export default function HomePage() {
         <div className="flex flex-row justify-between items-center flex-nowrap px-40 bg-slate-800/95 text-white pt-28">
           <img src="logo.png" className="w-96"></img>
           <p className="max-w-[60ch]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Necessitatibus, repudiandae eligendi recusandae rem, quaerat quis
-            saepe sint excepturi, aut sit culpa architecto dolorem odit illo.
-            Magni odit temporibus natus nostrum? Tenetur repellendus maiores,
-            autem unde quisquam eum, delectus possimus impedit asperiores
-            deserunt, quaerat facilis necessitatibus quas nobis aspernatur
-            quibusdam consequatur harum? Itaque, illo impedit alias asperiores
-            atque nihil dicta explicabo.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum,
+            provident placeat. Accusantium facilis veniam voluptatibus
+            reiciendis aut unde nobis! Nesciunt veniam quia velit magnam, ea ut
+            accusantium laboriosam quidem cupiditate.
           </p>
         </div>
         <Section image="attractionCardSingle.png">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Necessitatibus, repudiandae eligendi recusandae rem, quaerat quis
-            saepe sint excepturi, aut sit culpa architecto dolorem odit illo.
-            Magni odit temporibus natus nostrum? Tenetur repellendus maiores,
-            autem unde quisquam eum, delectus possimus impedit asperiores
-            deserunt, quaerat facilis necessitatibus quas nobis aspernatur
-            quibusdam consequatur harum? Itaque, illo impedit alias asperiores
-            atque nihil dicta explicabo.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ducimus
+            temporibus repellendus dicta, exercitationem voluptatum deleniti
+            omnis voluptates tenetur voluptatibus architecto dolores nihil, aut
+            non sapiente ullam quia sed doloremque.
           </p>
-          <button className="py-4 px-6 mt-8 bg-slate-700 text-white border-b-4 border-transparent hover:border-slate-900 transition-colors">
-            <Link href="">Purchase the Game!</Link>
-          </button>
+          <Button link="" title="Purchase the Game!"></Button>
         </Section>
+        <div className="section-group">
+          <div className="section-content-container">Filler Text</div>
+          <div className="section-content-container">Filler Text</div>
+          <div className="section-content-container">Filler Text</div>
+        </div>
       </div>
     </div>
   );
