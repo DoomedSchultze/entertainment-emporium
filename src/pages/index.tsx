@@ -2,9 +2,8 @@ import { Button } from 'components/Button';
 import { Navigation, Profile } from 'components/nav';
 import { Section } from 'components/Section';
 import Image from 'next/image';
-import Link from 'next/link';
 
-const HomePage = () => {
+export default function HomePage() {
   let login = true;
   let username = 'username';
   return (
@@ -41,6 +40,4 @@ const HomePage = () => {
       </div>
     </div>
   );
-};
-
-export default HomePage();
+}
