@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
@@ -65,7 +66,7 @@ export const Navigation = ({ children }: NavProps) => {
       <div className="navigation-container">
         <div className="logo-container pl-8">
           <div className="text-logo text-2xl font-black uppercase pt-1">
-            <img src="text-logo.png" alt="text logo" className="w-72"></img>
+            <Image src="text-logo.png" alt="text logo" className="w-72"></Image>
           </div>
         </div>
         <Nav></Nav>

@@ -1,6 +1,7 @@
 import { Button } from 'components/Button';
 import { Navigation, Profile } from 'components/nav';
 import { Section } from 'components/Section';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const HomePage = () => {
@@ -9,15 +10,15 @@ const HomePage = () => {
   return (
     <div className="">
       <div className="body-container">
-        <img
+        <Image
           src="game-board.jpg"
           alt="Game Board Background"
-          className="opacity-[.23] fixed top-0 block h-full w-full object-cover z-[-10]"></img>
+          className="opacity-[.23] fixed top-0 block h-full w-full object-cover z-[-10]"></Image>
         <Navigation>
           <Profile login={login} user={username} />
         </Navigation>
         <div className="flex flex-row justify-between items-center flex-nowrap px-40 bg-slate-800/95 text-white pt-28">
-          <img src="logo.png" className="w-96"></img>
+          <Image src="logo.png" className="w-96" alt="Logo"></Image>
           <p className="max-w-[60ch]">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, provident placeat.
             Accusantium facilis veniam voluptatibus reiciendis aut unde nobis! Nesciunt veniam quia
