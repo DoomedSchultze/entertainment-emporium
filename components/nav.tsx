@@ -13,10 +13,7 @@ export const Nav = () => {
   return (
     <nav className="top-nav justify-center items-center gap-2 h-16">
       {Array.map(([title, url]) => (
-        <Link
-          key={title}
-          href={url}
-          className="nav-link max-w-max pt-2 uppercase">
+        <Link key={title} href={url} className="nav-link max-w-max pt-2 uppercase">
           {title}
         </Link>
       ))}
@@ -24,21 +21,26 @@ export const Nav = () => {
   );
 };
 
-export const Profile = () => {
-  let userName = 'its_jordan';
-  var signedIn = 0;
+interface ProfileProps {
+  user: string;
+  login: boolean;
+}
+
+export const Profile = ({ user, login }: ProfileProps) => {
+  if (login == true) {
+    var signedIn = 0;
+  } else {
+    var signedIn = 1;
+  }
+  let userName = user;
+
   if (signedIn == 0) {
     return (
       <Link
         href={`user/${userName}`}
         className="profile-container hover:bg-slate-800 h-16 min-w-[4rem] w-max px-4 flex justify-center items-center rounded-lg transition-colors [&:hover_>_*]:text-white">
-        <div className="pr-4 pt-1 transition-colors text-lg font-bold">
-          {userName}
-        </div>
-        <FontAwesomeIcon
-          icon={faUser}
-          className="text-slate-800 scale-150 transition-colors"
-        />
+        <div className="pr-4 pt-1 transition-colors text-lg font-bold">{userName}</div>
+        <FontAwesomeIcon icon={faUser} className="text-slate-800 scale-150 transition-colors" />
       </Link>
     );
   } else {
@@ -47,16 +49,17 @@ export const Profile = () => {
         href="user/login"
         className="profile-container hover:bg-slate-800 h-16 min-w-[4rem] w-max px-4 flex justify-center items-center rounded-lg transition-colors [&:hover_>_*]:text-white">
         <div className="pr-4 pt-1 transition-colors">Sign In</div>
-        <FontAwesomeIcon
-          icon={faUser}
-          className="text-slate-800 scale-150 transition-colors"
-        />
+        <FontAwesomeIcon icon={faUser} className="text-slate-800 scale-150 transition-colors" />
       </Link>
     );
   }
 };
 
-export const Navigation = () => {
+interface NavProps {
+  children: React.ReactNode;
+}
+
+export const Navigation = ({ children }: NavProps) => {
   return (
     <div className="fixed top-0 z-[150] flex min-w-[100vw] w-[100vw]">
       <div className="navigation-container">
@@ -66,9 +69,7 @@ export const Navigation = () => {
           </div>
         </div>
         <Nav></Nav>
-        <div className="pr-4 justify-self-end">
-          <Profile />
-        </div>
+        <div className="pr-4 justify-self-end">{children}</div>
       </div>
     </div>
   );
