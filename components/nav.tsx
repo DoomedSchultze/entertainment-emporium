@@ -40,8 +40,8 @@ export const Profile = ({ user, login }: ProfileProps) => {
       <Link
         href={`user/${userName}`}
         className="profile-container hover:bg-slate-800 h-16 min-w-[4rem] w-max px-4 flex justify-center items-center rounded-lg transition-colors [&:hover_>_*]:text-white">
-        <div className="pr-4 pt-1 transition-colors text-lg font-bold">{userName}</div>
         <FontAwesomeIcon icon={faUser} className="text-slate-800 scale-150 transition-colors" />
+        <div className="pl-4 pt-1 transition-colors text-lg font-bold">{userName}</div>
       </Link>
     );
   } else {
@@ -49,8 +49,8 @@ export const Profile = ({ user, login }: ProfileProps) => {
       <Link
         href="user/login"
         className="profile-container hover:bg-slate-800 h-16 min-w-[4rem] w-max px-4 flex justify-center items-center rounded-lg transition-colors [&:hover_>_*]:text-white">
-        <div className="pr-4 pt-1 transition-colors">Sign In</div>
         <FontAwesomeIcon icon={faUser} className="text-slate-800 scale-150 transition-colors" />
+        <div className="pl-4 pt-1 transition-colors text-lg font-bold">Sign In</div>
       </Link>
     );
   }
@@ -66,7 +66,7 @@ export const Navigation = ({ children }: NavProps) => {
       <div className="navigation-container">
         <div className="logo-container pl-8">
           <div className="text-logo text-2xl font-black uppercase pt-1">
-            <Image src="text-logo.png" alt="text logo" className="w-72"></Image>
+            <img src="text-logo.png" alt="text logo" className="w-72"></img>
           </div>
         </div>
         <Nav></Nav>
